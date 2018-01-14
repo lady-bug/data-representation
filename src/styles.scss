@@ -3,4 +3,4 @@
 @import '~roboto-fontface/css/roboto/roboto-fontface.css';
 $body-font-family: Roboto;
 @import '~foundation-sites/scss/foundation';
-@include foundation-everything(true);
+@include foundation-everything(true);/* parameter true enables flexbox mode */

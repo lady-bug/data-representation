@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as Plotly from 'plotly.js/dist/plotly.js';
-import { ScatterData } from 'plotly.js/dist/plotly.js';
 
 @Component({
   selector: 'app-chart-languages',
@@ -21,11 +20,8 @@ export class ChartLanguagesComponent implements OnInit {
     textinfo: 'none',
     hoverinfo: 'none',
     hole: .7,
-    type: 'pie',
-    domain: {
-      x: [0, .33]
-    }
-  } as ScatterData ];
+    type: 'pie'
+  }];
 
   dataFrench = [
   {
@@ -38,11 +34,8 @@ export class ChartLanguagesComponent implements OnInit {
     textinfo: 'none',
     hoverinfo: 'none',
     hole: .7,
-    type: 'pie',
-    domain: {
-      x: [0, .33]
-    }
-  } as ScatterData ];
+    type: 'pie'
+  }];
 
   dataSpanish = [
   {
@@ -55,14 +48,12 @@ export class ChartLanguagesComponent implements OnInit {
     textinfo: 'none',
     hoverinfo: 'none',
     hole: .7,
-    type: 'pie',
-    domain: {
-      x: [0, .33]
-    }
-  } as ScatterData ];
+    type: 'pie'
+  }];
 
   returnLayout(dataSet): {}{
     return {
+      margin: { t: 0, l: 0, r: 0, b: 0 },
       showlegend: false,
       font: {
         family: 'Roboto',
@@ -72,22 +63,18 @@ export class ChartLanguagesComponent implements OnInit {
       annotations: [
         {
           text: dataSet.name,
-          showarrow: false,
-          x: .14,
-          y:.3
+          showarrow: false
         }
       ],
       images: [
         {
-          x: .19,
-          y: .4,
           sizex: 0.2,
           sizey: 0.2,
           source: `/assets/images/${dataSet.name}.png`,
-          xanchor: "right",
-          xref: "paper",
-          yanchor: "bottom",
-          yref: "paper"
+          xanchor: 'center',
+          yanchor: 'middle',
+          x:.5,
+          y:.5
         }
       ]
     }
