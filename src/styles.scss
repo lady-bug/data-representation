@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 //GENERAL IMPORTS AND INCLUDES
+@import '~roboto-fontface/css/roboto/roboto-fontface.css';
+$body-font-family: Roboto;
 @import '~foundation-sites/scss/foundation';
 @include foundation-everything(true);
